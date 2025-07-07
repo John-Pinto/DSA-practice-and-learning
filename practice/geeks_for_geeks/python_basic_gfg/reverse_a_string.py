@@ -5,7 +5,7 @@ def revStr(s: str) -> str:
     i_pointer = 0
     j_pointer = len(s) - 1
 
-    output = [0] * len(s)
+    output = ['a'] * len(s)
 
     while i_pointer <= j_pointer:
         output[i_pointer], output[j_pointer] = s[j_pointer], s[i_pointer]
