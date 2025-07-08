@@ -1,3 +1,7 @@
+# String Matching: This algorithm is used for finding substring in the text.
+# For explanation watch: https://www.youtube.com/watch?v=q4_90fOoS-s
+
+
 def compute_lps(pattern: str):
     """
     Computes the Longest Prefix Suffix (LPS) array for the given pattern.
