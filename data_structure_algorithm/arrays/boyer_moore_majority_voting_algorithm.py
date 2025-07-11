@@ -6,6 +6,11 @@
 # 2. A 33% occupancy n/3, is 3 - 1 = 2, i.e. 2 candidates
 # 3. A 25% occupancy n/4, is 4 - 1 = 3, i.e. 3 candidates and so on.
 
+# Read article:
+# 1. https://www.geeksforgeeks.org/theory-of-computation/boyer-moore-majority-voting-algorithm/
+# 2. https://www.geeksforgeeks.org/dsa/majority-element/
+# 3. https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/majority-vote
+
 
 def find_majority_one_third(arr):
     n = len(arr)
