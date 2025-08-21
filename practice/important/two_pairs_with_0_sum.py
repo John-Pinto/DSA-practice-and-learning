@@ -1,34 +1,5 @@
 # https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1
 
-# def getPairs(arr):
-#     arr.sort()
-
-#     i_pointer = 0
-#     j_pointer = len(arr) - 1
-#     selected_int = float("-inf")
-
-#     output = []
-
-#     while i_pointer <= j_pointer:
-#         if i_pointer == j_pointer:
-#             break
-#         elif abs(arr[i_pointer]) == selected_int:
-#             i_pointer += 1
-#         elif abs(arr[j_pointer]) == selected_int:
-#             j_pointer -= 1
-#         elif arr[i_pointer] + arr[j_pointer] == 0:
-#             output.append([arr[i_pointer], arr[j_pointer]])
-#             selected_int = abs(arr[i_pointer])
-#             i_pointer += 1
-#             j_pointer -= 1
-#         elif arr[i_pointer] + arr[j_pointer] < 0:
-#             i_pointer += 1
-
-#         else:
-#             j_pointer -= 1
-
-#     return output
-
 
 def getPairs(arr):
     arr.sort()

@@ -92,6 +92,7 @@ class LinkedList:
             self.prepend(new_data=new_data)
             return
 
+        self.size += 1
         current_head = self.head
         for i in range(index - 1):
             if current_head is None:
@@ -107,6 +108,8 @@ class LinkedList:
     def pop(self):
         if self.head is None:
             raise IndexError("Pop from empty linked list.")
+
+        self.size -= 1
         output_data = self.head.data
 
         if self.head == self.tail:
@@ -127,6 +130,7 @@ class LinkedList:
             self.pop()
             return
 
+        self.size -= 1
         current_head = self.head
         for i in range(index - 1):
             if current_head is None or current_head.next is None:
@@ -184,14 +188,17 @@ if __name__ == "__main__":
     linked_list.insert(new_data="Hello", index=0)
     linked_list.insert(new_data=":", index=4)
     linked_list.insert(new_data=".", index=8)
-    print(linked_list)
+    print(linked_list, len(linked_list))
 
     pop_left = linked_list.pop()
     print(f"After poping left: Data: {pop_left} and {linked_list}")
 
     linked_list.delete(index=3)
     linked_list.delete(index=6)
-    print(f"After Deleting at index 3 and 6: {linked_list}")
+    print(
+        f"After Deleting at index 3 and 6: {linked_list}"
+        f" and size of linked list: {len(linked_list)}"
+    )
 
     linked_list.reverse()
     print(f"After Reversing: {linked_list}")
