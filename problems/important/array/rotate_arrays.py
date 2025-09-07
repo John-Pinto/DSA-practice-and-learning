@@ -30,7 +30,7 @@ import math
 # Using reversal algorithm
 
 
-def rotateArr(arr, d):
+def left_rotate(arr, d):
     n = len(arr)
     d %= n
 
@@ -52,6 +52,24 @@ def reversal(arr, start, end):
     return arr
 
 
-print(rotateArr(arr=[1, 2, 3, 4, 5], d=2))
-print(rotateArr(arr=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d=3))
-print(rotateArr(arr=[7, 3, 9, 1], d=9))
+print(left_rotate(arr=[1, 2, 3, 4, 5], d=2))
+print(left_rotate(arr=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d=3))
+print(left_rotate(arr=[7, 3, 9, 1], d=9))
+
+
+def right_rotate(arr, d):
+    n = len(arr)
+    d %= n
+
+    arr = reversal(arr=arr, start=n - d, end=n - 1)
+
+    arr = reversal(arr=arr, start=0, end=(n - d) - 1)
+
+    arr = reversal(arr=arr, start=0, end=n - 1)
+
+    return arr
+
+
+print(right_rotate(arr=[1, 2, 3, 4, 5], d=2))
+print(right_rotate(arr=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20], d=3))
+print(right_rotate(arr=[7, 3, 9, 1], d=9))

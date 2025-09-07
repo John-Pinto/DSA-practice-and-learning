@@ -1,4 +1,5 @@
 # https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/buy-stock-2
+# https://leetcode.com/problems/best-time-to-buy-and-sell-stock
 
 
 def maximumProfit(prices):

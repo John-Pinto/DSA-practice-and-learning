@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/batch/gfg-160-problems/track/arrays-gfg-160/problem/max-circular-subarray-sum-1587115620
 
-# Using the formula "circular_max = total_sum - normal_min",
+# Using the formula "circular_sum = total_sum - normal_min",
 # normal max and min are found using the kadane algorithm.
 def circular_subarray_sum(arr):
     curr_max = 0
